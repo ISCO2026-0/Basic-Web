@@ -11,6 +11,7 @@
     }
     .Wish {
       color:deeppink;
+      text-shadow: 5px 5px 10px rgb(109, 0, 211);
     }
     .Schedule {
       color: rgb(35, 201, 104);
@@ -44,4 +45,146 @@
     }
     #Missyou{
         color: rgb(255, 0, 170);
+    }
+    .popups{
+      display: flex;
+      padding: 20px;
+      background-color:rgba(196, 192, 201, 0.836);
+      width: 300px;
+      height: 200px;
+      position: fixed;
+      top: 50%; /*Kalau sudah dipakai heightnya maka yang bawahnya juga sama kayak 50%
+                  dari top, berarti bottomnya juga ngikut, jadi walaupun ditambahi bottom
+                  tetap tidak bisa ngikut karena ukuran heightnya terpakai di setengah dari top*/
+      left: 50%;
+      translate: -50% -50%;
+      z-index: 10;
+      border: 10px inset red;
+    }
+    .popups:after
+    .popups h1{
+      display: flex;
+      align-content: center;
+      align-items: center;
+    }
+    .popups{
+      display: none;
+    }
+
+    section{
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      padding: 2rem;
+    }
+    
+    section.flex{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .wrapper{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      align-items: center;
+      justify-content: center;
+      max-width: 500px;
+      
+    }
+
+    .flex-container {
+    display: flex;
+    flex-wrap: wrap;       /* Ini kuncinya! Biar kalau penuh, dia pindah ke baris bawah */
+    justify-content: center;
+    align-items: center; /* Kotak-kotak bakal kumpul di tengah */
+           /* Jarak antar kotak otomatis */
+    
+    }
+
+    .card {
+         /* Bikin 3 kolom tanpa perlu div pembungkus lagi */
+        flex: 0 1 120px;
+        background-color: cyan;
+        height: 80px;
+        display: flex;         /* Biar teks H2 di dalamnya bisa di tengah */
+        width: 120px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 120px;
+      background-color: aqua;
+      height: 80px;
+    }
+
+    .container h2{
+      animation: pulse 2s ease 0.5s infinite;
+    }
+
+    @keyframes pulse {
+      0% {transform: scale(1);}
+      50% {transform: scale(1.2);}
+      50% {color: #00CC00;}
+      100% {transform: scale(1);}
+    }
+
+    body{}
+
+    .grid-container{
+      height: 800px;
+      display: grid;
+      gap: 1em;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      justify-items: center;
+      align-items:center;
+      
+    }
+
+    .grid-container .item{
+      animation: square 10s linear 0s infinite;
+    }
+
+    
+    @keyframes square {
+      0% {transform:rotate(0deg);}
+      50% {transform:rotate(180deg);}
+      100% {transform:rotate(360deg);}
+    }
+
+    @keyframes bentuk {
+      from {transform: }
+    }
+
+    .grid-container-2{
+      height: ;
+      display: grid;
+      gap: 1em;
+      grid-template-columns:300px 1fr;
+      grid-template-rows: 100vh;
+    }
+    
+    .grid-container-3{
+      height: ;
+      display: grid;
+      gap: 1em;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr;
+
+    }
+
+
+    section .item{
+      padding: 2rem;
+      background: linear-gradient(140deg, rgb(255, 119, 119), rgb(224, 125, 125), rgb(175, 37, 37));
+      border-radius: 8px;
+      font-size: 2rem;
+      text-align: center;
+      color: white;
+      
     }
